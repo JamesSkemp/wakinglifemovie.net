@@ -2,16 +2,18 @@
 
 {{ partial "logo-small.html" . }}
 
-<div id="body">
-	{{ .Content }}
+<div id="body" class="row">
+	<div class="large-9 large-centered columns">
+		{{ .Content }}
+	</div>
 
-	<div id="chapterNav">
-		<div>
+	<div id="chapterNav" class="row">
+		<div class="large-6 columns">
 			{{ if .Next }}
 				<a href="{{ .Next.Permalink }}">Previous chapter</a>
 			{{ end }}
 		</div>
-		<div>
+		<div class="large-6 columns">
 			{{ if .Prev }}
 				<a href="{{ .Prev.Permalink }}">Next chapter</a>
 			{{ end }}

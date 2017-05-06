@@ -2,44 +2,50 @@
 
 {{ partial "logo-large.html" . }}
 
-<div class="row" id="body">
-	<p>The transcript for the wonderful movie Waking Life can be found online, transcribed by James Skemp.</p>
-	<p>Comment on the complete Waking Life transcript below, or read and comment on an individual chapter:</p>
-	<div class="homeBlock">
-		<ol>
-			{{ range first 10 .Data.Pages.Reverse }}
-				<li>
-					<a href="{{ .Permalink }}">
-						{{ .Params.chaptername }}
-					</a>
-				</li>
+<div class="row">
+	<div class="large-9 large-centered columns">
+		<p>The transcript for the wonderful movie Waking Life can be found online, transcribed by James Skemp.</p>
+		<p>Comment on the complete Waking Life transcript below, or read and comment on an individual chapter:</p>
+		<div class="row">
+			<div class="large-4 columns">
+				<ol>
+					{{ range first 10 .Data.Pages.Reverse }}
+						<li>
+							<a href="{{ .Permalink }}">
+								{{ .Params.chaptername }}
+							</a>
+						</li>
 
-			{{ end }}
-		</ol>
-	</div>
-	<div class="homeBlock">
-		<ol start="11">
-			{{ range last 10 .Data.Pages.Reverse }}
-				<li>
-					<a href="{{ .Permalink }}">
-						{{ .Params.chaptername }}
-					</a>
-				</li>
-			{{ end }}
-		</ol>
-	</div>
+					{{ end }}
+				</ol>
+			</div>
+			<div class="large-4 columns">
+				<ol start="11">
+					{{ range last 10 .Data.Pages.Reverse }}
+						<li>
+							<a href="{{ .Permalink }}">
+								{{ .Params.chaptername }}
+							</a>
+						</li>
+					{{ end }}
+				</ol>
+			</div>
 
-	{{ partial "dvd-block.html" . }}
+			{{ partial "dvd-block.html" . }}
+		</div>
+	</div>
 </div>
 
 {{ partial "disqus-base.html" . }}
 
-<div id="transcript-info" class="row">
-	<p>Script of the movie <em>Waking Life</em>, based on Tara Carreon's transcription, but with revisions based upon a viewing of the DVD version of the movie, which was watched with subtitles.</p>
-	<p>Special thanks to Andrew, Larry Redden, Ed Sandberg, and <a rel="external nofollow" href="http://slalom-speaking.blogspot.com/">Mark W</a> for pointing out errors in Tara's transcription (numerous errors were fixed here, along with some scene information clarifications). Absolutely let me know if anything slipped by my look-over, especially in the quicker and the 'like, like, you know,' sections ;)</p>
-	<p>Please note that these chapters do contain small images from the film. For the sake of all users, images have been limited to no more than two per chapter.</p>
-	<p>Revisions by James Richard Skemp III<br />Revision begun: December 24 2004</p>
-	<p>Modified: June 4 2005; June 15 2005; June 16 2005; June 21 2005; July 22 2005; August 25 2005; September 27 2005; October 17 2005; October 21 2005; May 25, 2006; August 20, 2006; January 27, 2007</p>
+<div class="row">
+	<div class="large-9 large-centered columns">
+		<p>Script of the movie <em>Waking Life</em>, based on Tara Carreon's transcription, but with revisions based upon a viewing of the DVD version of the movie, which was watched with subtitles.</p>
+		<p>Special thanks to Andrew, Larry Redden, Ed Sandberg, and <a rel="external nofollow" href="http://slalom-speaking.blogspot.com/">Mark W</a> for pointing out errors in Tara's transcription (numerous errors were fixed here, along with some scene information clarifications). Absolutely let me know if anything slipped by my look-over, especially in the quicker and the 'like, like, you know,' sections ;)</p>
+		<p>Please note that these chapters do contain small images from the film. For the sake of all users, images have been limited to no more than two per chapter.</p>
+		<p>Revisions by James Richard Skemp III<br />Revision begun: December 24 2004</p>
+		<p>Modified: June 4 2005; June 15 2005; June 16 2005; June 21 2005; July 22 2005; August 25 2005; September 27 2005; October 17 2005; October 21 2005; May 25, 2006; August 20, 2006; January 27, 2007</p>
+	</div>
 </div>
 
 {{ partial "footer-copyright.html" . }}

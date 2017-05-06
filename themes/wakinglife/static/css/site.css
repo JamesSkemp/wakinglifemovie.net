@@ -10,12 +10,6 @@ img
 {
 	border:none;
 }
-#header, #body, #comments, #footer, #transcript-info
-{
-	width:100%;
-	max-width:610px;
-	margin:0 auto;
-}
 #comments
 {
 	clear:both;
@@ -24,19 +18,10 @@ img
 {
 	text-align:center;
 }
-#footer
+footer
 {
 	border-top:1px solid gray;
 	margin-top:.5em;
-}
-.homeBlock
-{
-	width:38%;
-	float:left;
-}
-.homeDvdBlock
-{
-	width:130px;
 }
 #chapterNav
 {
