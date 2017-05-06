@@ -2,3 +2,6 @@ languageCode = "en-us"
 title = "Waking Life Movie Transcript"
 baseurl = "http://wakinglifemovie.net/"
 theme = "wakinglife"
+
+[params]
+  description = "Transcript for the wonderful movie Waking Life."
