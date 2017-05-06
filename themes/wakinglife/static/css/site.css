@@ -10,7 +10,7 @@ img
 {
 	border:none;
 }
-#header, #body, #comments, #footer
+#header, #body, #comments, #footer, #transcript-info
 {
 	width:100%;
 	max-width:610px;

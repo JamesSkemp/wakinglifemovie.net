@@ -1,6 +1,31 @@
+{{ partial "header.html" . }}
+
 {{ partial "logo-small.html" . }}
 
-<p>Theme | Single</p>
+<div id="body">
+	{{ .Content }}
 
+	<div id="chapterNav">
+		<div>
+			{{ if .Next }}
+				<a href="{{ .Next.Permalink }}">Previous chapter</a>
+			{{ end }}
+		</div>
+		<div>
+			{{ if .Prev }}
+				<a href="{{ .Prev.Permalink }}">Next chapter</a>
+			{{ end }}
+		</div>
+		<br />
+	</div>
+</div>
+
+{{ partial "disqus-base.html" . }}
+
+{{ partial "footer-copyright.html" . }}
+
+{{ partial "analytics.html" . }}
+
+{{ partial "disqus-strivinglife.html" . }}
 
 {{ partial "footer.html" . }}
