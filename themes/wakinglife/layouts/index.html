@@ -1,0 +1,43 @@
+{{ partial "header.html" . }}
+
+{{ partial "logo-large.html" . }}
+
+<div id="body">
+	<p>The transcript for the wonderful movie Waking Life can be found online, transcribed by James Skemp.</p>
+	<p>Comment on the complete Waking Life transcript below, or read and comment on an individual chapter:</p>
+	<div class="homeBlock">
+		<ol>
+			{{ range first 10 .Data.Pages.Reverse }}
+				<li>
+					<a href="{{ .Permalink }}">
+						{{ .Params.chaptername }}
+					</a>
+				</li>
+
+			{{ end }}
+		</ol>
+	</div>
+	<div class="homeBlock">
+		<ol start="11">
+			{{ range last 10 .Data.Pages.Reverse }}
+				<li>
+					<a href="{{ .Permalink }}">
+						{{ .Params.chaptername }}
+					</a>
+				</li>
+			{{ end }}
+		</ol>
+	</div>
+
+	{{ partial "dvd-block.html" . }}
+</div>
+
+{{ partial "disqus-base.html" . }}
+
+{{ partial "footer-copyright.html" . }}
+
+{{ partial "analytics.html" . }}
+
+{{ partial "disqus-waking.html" . }}
+
+{{ partial "footer.html" . }}
