@@ -1,0 +1,17 @@
+<div id="comments-form" class="row">
+	<div class="large-9 large-centered columns">
+		<h2>Leave a Comment</h2>
+		<form method="POST" action="https://api.staticman.net/v2/entry/JamesSkemp/wakinglifemovie.net/master/comments">
+			<input name="options[redirect]" type="hidden" value="{{ .Permalink }}#comment-submitted" />
+			<input type="hidden" name="options[entryId]" value="{{ .UniqueID }}" />
+			<!-- e.g. "2016-01-02-this-is-a-post" -->
+			<input name="options[slug]" type="hidden" value="{{ if eq .File.BaseFileName "" }}page{{ end }}{{ .File.BaseFileName }}" />
+			<label>Name<input name="fields[name]" type="text" /></label>
+			<label>Email<input name="fields[email]" type="email" /></label>
+			<label>Message<textarea name="fields[body]" rows="10"></textarea></label>
+			
+			<button type="submit" class="button">Post Comment</button>
+		</form>
+		<p>All comments go through a moderation process and may take up to 24 hours to display. See the <a href="https://github.com/JamesSkemp/wakinglifemovie.net/pulls">project repository</a> for all pending comments.</p>
+	</div>
+</div>
