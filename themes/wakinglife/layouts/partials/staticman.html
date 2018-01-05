@@ -1,7 +1,7 @@
 <div id="comments-form" class="row">
 	<div class="large-9 large-centered columns">
 		<h2>Leave a Comment</h2>
-		<form method="POST" action="https://api.staticman.net/v2/entry/{{ .Site.Params.staticman.username }}/{{ .Site.Params.staticman.repository }}/{{ .Site.Params.staticman.branch }}/comments">
+		<form method="POST" action="https://api.staticman.net/v2/entry/JamesSkemp/wakinglifemovie.net/master/comments">
 			<input name="options[redirect]" type="hidden" value="{{ .Permalink }}#comment-submitted" />
 			<input type="hidden" name="options[entryId]" value="{{ .UniqueID }}" />
 			<!-- e.g. "2016-01-02-this-is-a-post" -->
