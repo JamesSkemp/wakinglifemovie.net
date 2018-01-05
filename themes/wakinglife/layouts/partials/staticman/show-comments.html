@@ -3,6 +3,9 @@
 {{ $comments := readDir "data/comments" }}
 {{ $.Scratch.Add "hasComments" 0 }}
 {{ $entryId := .UniqueID }}
+{{ if eq $entryId "" }}
+{{ $entryId := "page" }}
+{{ end }}
 
 {{ range $comments }}
   {{ if eq .Name $entryId }}
@@ -11,7 +14,7 @@
 <blockquote>
 <p>{{ .body | markdownify }}</p>
 <cite>
-  <img src="https://www.gravatar.com/avatar/{{ .email }}?s=100">
+  <img src="https://www.gravatar.com/avatar/{{ .email }}?s=100" />
   <strong>{{ .name }}</strong><br>{{ dateFormat "02/01/2006" .date }}  
 </cite>
 </blockquote>
