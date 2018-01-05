@@ -1,9 +1,11 @@
 <div id="comments" class="row">
 		<div class="large-9 large-centered columns">
+			<h2>Comments</h2>
+
 {{ $comments := readDir "data/comments" }}
 {{ $.Scratch.Add "hasComments" 0 }}
 {{ $entryId := .UniqueID }}
-{{ if eq $entryId "" }}
+{{ if eq .UniqueID "" }}
 {{ $entryId := "page" }}
 {{ end }}
 
