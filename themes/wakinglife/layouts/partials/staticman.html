@@ -2,11 +2,12 @@
 	<div class="large-9 large-centered columns">
 		<h2>Leave a Comment</h2>
 		<form method="POST" action="https://api.staticman.net/v2/entry/JamesSkemp/wakinglifemovie.net/master/comments">
-			<input name="options[redirect]" type="hidden" value="https://wakinglifemovie.net">
+			<input name="options[redirect]" type="hidden" value="{{ .Permalink }}#comment-submitted" />
+			<input type="hidden" name="options[entryId]" value="{{ .UniqueID }}" />
 			<!-- e.g. "2016-01-02-this-is-a-post" -->
-			<input name="options[slug]" type="hidden" value="{{ if eq .File.BaseFileName "" }}page{{ end }}{{ .File.BaseFileName }}">
-			<label>Name<input name="fields[name]" type="text"></label>
-			<label>Email<input name="fields[email]" type="email"></label>
+			<input name="options[slug]" type="hidden" value="{{ if eq .File.BaseFileName "" }}page{{ end }}{{ .File.BaseFileName }}" />
+			<label>Name<input name="fields[name]" type="text" /></label>
+			<label>Email<input name="fields[email]" type="email" /></label>
 			<label>Message<textarea name="fields[message]"></textarea></label>
 			
 			<button type="submit" class="button">Post Comment</button>
