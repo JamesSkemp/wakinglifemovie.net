@@ -1,3 +1,5 @@
+<div id="comments" class="row">
+		<div class="large-9 large-centered columns">
 {{ $comments := readDir "data/comments" }}
 {{ $.Scratch.Add "hasComments" 0 }}
 {{ $entryId := .UniqueID }}
@@ -18,5 +20,7 @@
 {{ end }}
 
 {{ if eq ($.Scratch.Get "hasComments") 0 }}
-  <p>Hey, be the first who comment this article.</p>
+  <!--<p>Hey, be the first who comment this article.</p>-->
 {{ end }}
+		</div>
+</div>
