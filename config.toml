@@ -5,3 +5,9 @@ theme = "wakinglife"
 
 [params]
   description = "Transcript for the wonderful movie Waking Life."
+
+[staticman]
+  endpoint = "https://api.staticman.net/v2/entry/"
+  username = "JamesSkemp"
+  repository = "wakinglifemovie.net"
+  branch = "master"
