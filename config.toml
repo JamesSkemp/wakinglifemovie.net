@@ -1,13 +1,7 @@
 languageCode = "en-us"
 title = "Waking Life Movie Transcript"
-baseurl = "http://wakinglifemovie.net/"
+baseurl = "https://wakinglifemovie.net/"
 theme = "wakinglife"
 
 [params]
   description = "Transcript for the wonderful movie Waking Life."
-
-  [staticman]
-    endpoint = "https://api.staticman.net/v2/entry/"
-    username = "JamesSkemp"
-    repository = "wakinglifemovie.net"
-    branch = "master"
